@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFamilyTree.BusinessLogic"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFamilyTree.Data", "MyFamilyTree.Data\MyFamilyTree.Data.csproj", "{3760B46A-E0E1-4D7D-956E-308C3201E8D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFamilyTree.IOC", "MyFamilyTree.IOC2\MyFamilyTree.IOC.csproj", "{3CA38742-51C6-41F4-94C0-08C52A852AEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFamilyTree.IOC", "MyFamilyTree.IOC\MyFamilyTree.IOC.csproj", "{3CA38742-51C6-41F4-94C0-08C52A852AEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
