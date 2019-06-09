@@ -1,6 +1,5 @@
 ﻿using Autofac;
-using DryIoc;
-using MyFamilyTree.IOC2;
+using MyFamilyTree.IOC;
 using Xamarin.Forms.Xaml;
 using MyFamilyTree.Views;
 
@@ -14,18 +13,10 @@ namespace MyFamilyTree
         {
             InitializeComponent();
 
-            RegisterDependencies();
-
-            //var mainPage = ServiceContainer.Instance.Resolve<MainPage>();
             var container = ServiceContainer.GetInstance(builder => builder.RegisterType<MainPage>());
             var mainPage = container.Resolve<MainPage>();
 
             MainPage = mainPage;
-        }
-
-        private static void RegisterDependencies()
-        {
-            //ServiceContainer.Instance.Register<MainPage>();
         }
 
         protected override void OnStart()

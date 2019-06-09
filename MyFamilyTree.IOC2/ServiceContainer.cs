@@ -5,14 +5,14 @@ using Autofac;
 using MyFamilyTree.BusinessLogic.Family.Models;
 using MyFamilyTree.Data.UserProfile;
 
-namespace MyFamilyTree.IOC2
+namespace MyFamilyTree.IOC
 {
     public sealed class ServiceContainer
     {
-        private static IContainer _instance;
+        private static IContainer _Instance;
 
         public static IContainer GetInstance(Action<ContainerBuilder> configure = null) 
-            => _instance ?? (_instance = Configure(configure));
+            => _Instance ?? (_Instance = Configure(configure));
 
         private static IContainer Configure(Action<ContainerBuilder> configure = null)
         {

@@ -10,11 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />  
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.482894" />  
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\MyFamilyTree.Application\MyFamilyTree.IOC.csproj" />
-    <ProjectReference Include="..\..\MyFamilyTree.IOC2\MyFamilyTree.IOC2.csproj" />
+    <ProjectReference Include="..\..\MyFamilyTree.IOC2\MyFamilyTree.IOC.csproj" />
   </ItemGroup>
 </Project>
