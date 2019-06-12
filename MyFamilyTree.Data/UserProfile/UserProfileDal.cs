@@ -4,7 +4,7 @@ namespace MyFamilyTree.Data.UserProfile
 {
     public class UserProfileDal : IUserProfileDal
     {
-        public IEnumerable<UserProfileEntity> GetUserProfiles()
+        public IEnumerable<IUserProfileEntity> GetUserProfiles()
         {
             yield return new UserProfileEntity
             {

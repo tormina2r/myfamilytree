@@ -92,9 +92,9 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyFamilyTree\MyFamilyTree.csproj">
-      <Project>{AFFDF122-7EA5-4466-B034-24DC77F89817}</Project>
-      <Name>MyFamilyTree</Name>
+    <ProjectReference Include="..\MyFamilyTree\MyFamilyTree.App.csproj">
+      <Project>{5C1EA95F-A2BC-42DD-A396-B154A103AC59}</Project>
+      <Name>MyFamilyTree.App</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

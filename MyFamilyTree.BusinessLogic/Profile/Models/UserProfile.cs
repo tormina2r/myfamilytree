@@ -4,9 +4,9 @@ namespace MyFamilyTree.BusinessLogic.Profile.Models
 {
     public class UserProfile
     {
-        private readonly UserProfileEntity _Entity;
+        private readonly IUserProfileEntity _Entity;
 
-        public UserProfile(UserProfileEntity entity)
+        public UserProfile(IUserProfileEntity entity)
         {
             _Entity = entity;
         }

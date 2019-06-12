@@ -1,9 +1,7 @@
-﻿using System.Reflection;
-using Autofac;
+﻿using Autofac;
 using MyFamilyTree.IOC;
-using MyFamilyTree.ViewModels;
+using MyFamilyTree.Presentation.Views;
 using Xamarin.Forms.Xaml;
-using MyFamilyTree.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MyFamilyTree
@@ -15,10 +13,7 @@ namespace MyFamilyTree
         {
             InitializeComponent();
 
-            var container = ServiceContainer.GetInstance(builder 
-                => builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly()).PublicOnly());
-
-            var mainPage = container.Resolve<MainPage>();
+            var mainPage = ServiceContainer.Instance.Resolve<MainPage>();
 
             MainPage = mainPage;
         }

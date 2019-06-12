@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>MyFamilyTree.Business</AssemblyName>
+    <RootNamespace>MyFamilyTree.Business</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>MyFamilyTree.App</AssemblyName>
+    <RootNamespace>MyFamilyTree.App</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.482894" />  
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\MyFamilyTree.BusinessLogic\MyFamilyTree.Business.csproj" />
+    <ProjectReference Include="..\..\MyFamilyTree.Data\MyFamilyTree.Data.csproj" />
+    <ProjectReference Include="..\..\MyFamilyTree.Presentation\MyFamilyTree.Presentation.csproj" />
+    <ProjectReference Include="..\..\MyFamilyTree.ServiceLayer\MyFamilyTree.ServiceLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>
