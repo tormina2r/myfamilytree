@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MyFamilyTree.ViewModels;assembly=MyFamilyTree.Presentation"
+             x:Class="MyFamilyTree.Presentation.Views.MyFamilyPage"
+             BindingContext="{x:Static viewModels:ViewModelLocator.MyFamilyViewModel}">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="thor" WidthRequest="100"></Image>
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="Andersen" FontSize="26"></Label>
+                    <Label Text="Thor André Landsverk"></Label>
+                    <Label Text="Date of birth: 2. February 1981"></Label>
+                </StackLayout>
+            </StackLayout>
+            <BoxView BackgroundColor="White" HeightRequest="1"></BoxView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
