@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace MyFamilyTree.ViewModels
 {
@@ -7,19 +8,31 @@ namespace MyFamilyTree.ViewModels
         public string FamilyName => "Andersen";
         public IList<FamilyMemberViewModel> FamilyMembers => new List<FamilyMemberViewModel>
         {
-            new FamilyMemberViewModel("Lisa"),
-            new FamilyMemberViewModel("Herman"),
-            new FamilyMemberViewModel("Hennie"),
-        };
+            new FamilyMemberViewModel{Name = "Lisa", Relation = "Samboer" },
+            new FamilyMemberViewModel{Name = "Herman", Relation = "Sønn"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
+        };        
     }
 
     public class FamilyMemberViewModel
     {
-        public FamilyMemberViewModel(string name)
-        {
-            Name = name;
-        }
-
-        public string Name { get; }
+        public string Name { get; set; }
+        public string Relation { get; set; }
     }
 }

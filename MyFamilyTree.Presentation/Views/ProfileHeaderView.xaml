@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFamilyTree.Presentation.Views.ProfileHeaderView">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="thor" WidthRequest="100"></Image>
+            <StackLayout VerticalOptions="Center">
+                <Label Text="Andersen" FontSize="26"></Label>
+                <Label Text="Thor André Landsverk"></Label>
+                <Label Text="Date of birth: 2. February 1981"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

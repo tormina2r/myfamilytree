@@ -2,19 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:MyFamilyTree.ViewModels;assembly=MyFamilyTree.Presentation"
+             xmlns:views="clr-namespace:MyFamilyTree.Presentation.Views;assembly=MyFamilyTree.Presentation"
+             xmlns:ffImageLoading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="MyFamilyTree.Presentation.Views.MyFamilyPage"
              BindingContext="{x:Static viewModels:ViewModelLocator.MyFamilyViewModel}">
-    <ContentPage.Content>
-        <StackLayout Padding="10">
-            <StackLayout Orientation="Horizontal">
-                <Image Source="thor" WidthRequest="100"></Image>
-                <StackLayout VerticalOptions="Center">
-                    <Label Text="Andersen" FontSize="26"></Label>
-                    <Label Text="Thor André Landsverk"></Label>
-                    <Label Text="Date of birth: 2. February 1981"></Label>
-                </StackLayout>
-            </StackLayout>
-            <BoxView BackgroundColor="White" HeightRequest="1"></BoxView>
+    <StackLayout Padding="10">
+        <views:ProfileHeaderView></views:ProfileHeaderView>
+        <StackLayout Padding="0" Spacing="20">
+            <ListView
+                ItemsSource="{Binding FamilyMembers}"
+                BackgroundColor="GhostWhite"
+                RowHeight="80">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="10" BackgroundColor="GhostWhite" Margin="5" CornerRadius="10">
+                                <StackLayout 
+                                Orientation="Horizontal">
+                                    <Image Source="thor"></Image>
+                                    <StackLayout>
+                                        <Label Text="{Binding Name}" TextColor="CornflowerBlue"></Label>
+                                        <Label Text="{Binding Relation}" TextColor="CornflowerBlue"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Add" BackgroundColor="Green"></Button>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>
