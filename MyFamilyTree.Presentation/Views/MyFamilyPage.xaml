@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:MyFamilyTree.ViewModels;assembly=MyFamilyTree.Presentation"
              xmlns:views="clr-namespace:MyFamilyTree.Presentation.Views;assembly=MyFamilyTree.Presentation"
-             xmlns:ffImageLoading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="MyFamilyTree.Presentation.Views.MyFamilyPage"
-             BindingContext="{x:Static viewModels:ViewModelLocator.MyFamilyViewModel}">
+             BindingContext="{x:Static viewModels:ViewModelLocator.MyFamilyViewModel}"
+             Title="My Family">
     <StackLayout Padding="10">
         <views:ProfileHeaderView></views:ProfileHeaderView>
         <StackLayout Padding="0" Spacing="20">
@@ -13,9 +13,13 @@
                 ItemsSource="{Binding FamilyMembers}"
                 BackgroundColor="GhostWhite"
                 RowHeight="80">
-                <ListView.ItemTemplate>
+                <ListView.ItemTemplate>                    
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="test"></MenuItem>
+                                <MenuItem Text="test2"></MenuItem>
+                            </ViewCell.ContextActions>
                             <Frame Padding="10" BackgroundColor="GhostWhite" Margin="5" CornerRadius="10">
                                 <StackLayout 
                                 Orientation="Horizontal">
@@ -30,7 +34,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Add" BackgroundColor="Green"></Button>
+            <Button Text="Add" BackgroundColor="Green" Command="{Binding NavigateToPersonDetailPage}"></Button>
         </StackLayout>
     </StackLayout>
 </ContentPage>

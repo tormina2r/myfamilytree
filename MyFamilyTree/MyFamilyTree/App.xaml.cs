@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using MyFamilyTree.IOC;
 using MyFamilyTree.Presentation.Views;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,7 +16,7 @@ namespace MyFamilyTree
 
             var mainPage = ServiceContainer.Instance.Resolve<MainPage>();
 
-            MainPage = mainPage;
+            MainPage = new NavigationPage(mainPage);
         }
 
         protected override void OnStart()

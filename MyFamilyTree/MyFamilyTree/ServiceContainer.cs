@@ -3,6 +3,7 @@ using System.Reflection;
 using Autofac;
 using MyFamilyTree.BusinessLogic.Family.Models;
 using MyFamilyTree.Data.UserProfile;
+using MyFamilyTree.Presentation.Views;
 using MyFamilyTree.ViewModels;
 
 namespace MyFamilyTree.IOC
@@ -22,6 +23,8 @@ namespace MyFamilyTree.IOC
             containerBuilder.RegisterAssemblyTypes(dataLayer, serviceLayer).Where(t => t.Name.EndsWith("Dal")).As(t => t.GetInterface($"I{t.Name}"));
             containerBuilder.RegisterAssemblyTypes(presentationLayer).Where(t => t.Name.EndsWith("Page")).AsSelf();
             containerBuilder.RegisterAssemblyTypes(presentationLayer).Where(t => t.Name.EndsWith("ViewModel")).AsSelf();
+
+            containerBuilder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
 
             Instance = containerBuilder.Build();
         }
