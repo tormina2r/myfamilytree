@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyFamilyTree.ServiceLayer\MyFamilyTree.ServiceLayer.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Views\ProfileHeaderView.xaml.cs">
       <DependentUpon>ProfileHeaderView.xaml</DependentUpon>
     </Compile>
@@ -39,6 +35,10 @@
     <EmbeddedResource Update="Views\SearchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Behaviours\" />
   </ItemGroup>
 
 </Project>

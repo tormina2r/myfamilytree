@@ -2,7 +2,6 @@
 using System.Reflection;
 using Autofac;
 using MyFamilyTree.BusinessLogic.Family.Models;
-using MyFamilyTree.Data.UserProfile;
 using MyFamilyTree.Presentation.Views;
 using MyFamilyTree.ViewModels;
 
@@ -16,11 +15,8 @@ namespace MyFamilyTree.IOC
 
             var presentationLayer = Assembly.GetAssembly(typeof(MyFamilyViewModel));
             var businessLayer = Assembly.GetAssembly(typeof(PersonModel));
-            var dataLayer = Assembly.GetAssembly(typeof(UserProfileDal));
-            var serviceLayer = Assembly.GetAssembly(typeof(IUserProfileDal));
-
-            containerBuilder.RegisterAssemblyTypes(businessLayer, dataLayer, serviceLayer).Where(t => t.Name.EndsWith("Service")).As(t => t.GetInterface($"I{t.Name}"));
-            containerBuilder.RegisterAssemblyTypes(dataLayer, serviceLayer).Where(t => t.Name.EndsWith("Dal")).As(t => t.GetInterface($"I{t.Name}"));
+            
+            containerBuilder.RegisterAssemblyTypes(businessLayer).Where(t => t.Name.EndsWith("Service")).As(t => t.GetInterface($"I{t.Name}"));
             containerBuilder.RegisterAssemblyTypes(presentationLayer).Where(t => t.Name.EndsWith("Page")).AsSelf();
             containerBuilder.RegisterAssemblyTypes(presentationLayer).Where(t => t.Name.EndsWith("ViewModel")).AsSelf();
 

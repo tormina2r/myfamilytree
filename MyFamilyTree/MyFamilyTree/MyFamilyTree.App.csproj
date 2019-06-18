@@ -20,7 +20,6 @@
     <ProjectReference Include="..\..\MyFamilyTree.BusinessLogic\MyFamilyTree.Business.csproj" />
     <ProjectReference Include="..\..\MyFamilyTree.Data\MyFamilyTree.Data.csproj" />
     <ProjectReference Include="..\..\MyFamilyTree.Presentation\MyFamilyTree.Presentation.csproj" />
-    <ProjectReference Include="..\..\MyFamilyTree.ServiceLayer\MyFamilyTree.ServiceLayer.csproj" />
   </ItemGroup>
 
   <ItemGroup>

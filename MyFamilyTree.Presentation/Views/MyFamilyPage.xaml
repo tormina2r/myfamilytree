@@ -11,8 +11,8 @@
         <StackLayout Padding="0" Spacing="20">
             <ListView
                 ItemsSource="{Binding FamilyMembers}"
-                BackgroundColor="GhostWhite"
-                RowHeight="80">
+                RowHeight="80"
+                SelectedItem="{Binding SelectedItem}">
                 <ListView.ItemTemplate>                    
                     <DataTemplate>
                         <ViewCell>
@@ -20,13 +20,13 @@
                                 <MenuItem Text="test"></MenuItem>
                                 <MenuItem Text="test2"></MenuItem>
                             </ViewCell.ContextActions>
-                            <Frame Padding="10" BackgroundColor="GhostWhite" Margin="5" CornerRadius="10">
+                            <Frame Padding="10" BackgroundColor="#3a6f82" Margin="5" CornerRadius="10">
                                 <StackLayout 
                                 Orientation="Horizontal">
                                     <Image Source="thor"></Image>
                                     <StackLayout>
-                                        <Label Text="{Binding Name}" TextColor="CornflowerBlue"></Label>
-                                        <Label Text="{Binding Relation}" TextColor="CornflowerBlue"></Label>
+                                        <Label Text="{Binding Name}"></Label>
+                                        <Label Text="{Binding Relation}"></Label>
                                     </StackLayout>
                                 </StackLayout>
                             </Frame>
@@ -34,7 +34,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Add" BackgroundColor="Green" Command="{Binding NavigateToPersonDetailPage}"></Button>
+            <Button Text="Add" Command="{Binding NavigateToPersonDetailPage}"></Button>
         </StackLayout>
     </StackLayout>
 </ContentPage>

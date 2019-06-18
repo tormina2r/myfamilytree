@@ -7,11 +7,15 @@ namespace MyFamilyTree.Presentation.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MyFamilyPage : ContentPage
 	{
-		public MyFamilyPage (MyFamilyViewModel viewModel)
-		{
-			InitializeComponent ();
+        public MyFamilyPage()
+        {
+            InitializeComponent();
+        }
 
-            BindingContext = viewModel;
+		public MyFamilyPage (MyFamilyViewModel viewModel)
+            :this()
+		{
+			BindingContext = viewModel;
 		}        
     }
 }

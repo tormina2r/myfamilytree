@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyFamilyTree.ServiceLayer\MyFamilyTree.ServiceLayer.csproj" />
+    <ProjectReference Include="..\MyFamilyTree.Data\MyFamilyTree.Data.csproj" />
   </ItemGroup>
 
 </Project>

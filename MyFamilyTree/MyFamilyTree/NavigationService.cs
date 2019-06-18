@@ -13,7 +13,7 @@ namespace MyFamilyTree.IOC
 
             var navigationPage = Application.Current.MainPage as NavigationPage;
             if (navigationPage != null)
-                navigationPage.Navigation.PushAsync(new NavigationPage(instance));
+                navigationPage.Navigation.PushAsync(instance);
             else
                 Application.Current.MainPage = new NavigationPage(instance);
         }
