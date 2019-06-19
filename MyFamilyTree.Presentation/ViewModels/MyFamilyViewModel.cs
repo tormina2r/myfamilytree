@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace MyFamilyTree.ViewModels
 {
-    public class MyFamilyViewModel: INotifyPropertyChanged
+    public class MyFamilyViewModel : INotifyPropertyChanged
     {
         private readonly INavigationService _NavigationService;
         private FamilyMemberViewModel _SelectedItem;
@@ -34,30 +34,18 @@ namespace MyFamilyTree.ViewModels
         public string FamilyName => "Andersen";
         public IList<FamilyMemberViewModel> FamilyMembers => new List<FamilyMemberViewModel>
         {
-            new FamilyMemberViewModel{Name = "Lisa", Relation = "Samboer" },
-            new FamilyMemberViewModel{Name = "Herman", Relation = "Sønn"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-            new FamilyMemberViewModel{Name = "Hennie", Relation = "Datter"},
-        };        
+            new FamilyMemberViewModel{Name = "Lisa Pettersen", Relation = "Partner", Image="lisa" },
+            new FamilyMemberViewModel{Name = "Herman Andersen", Relation = "Son"},
+            new FamilyMemberViewModel{Name = "Hennie Andersen", Relation = "Daughter"},
+            new FamilyMemberViewModel{Name = "Gunn Andersen", Relation = "Mother", Image="mamma"},
+            new FamilyMemberViewModel{Name = "Tor Øystein Aas Andersen", Relation = "Father", Image="pappa"},
+            new FamilyMemberViewModel{Name = "Rikke Søfteland (født Andersen)", Relation = "Sister", Image="rikke"},
+        };
 
         public ICommand NavigateToPersonDetailPage { get; }
 
-        public FamilyMemberViewModel SelectedItem {
+        public FamilyMemberViewModel SelectedItem
+        {
             get
             {
                 return _SelectedItem;
@@ -84,5 +72,6 @@ namespace MyFamilyTree.ViewModels
     {
         public string Name { get; set; }
         public string Relation { get; set; }
+        public string Image { get; set; }
     }
 }

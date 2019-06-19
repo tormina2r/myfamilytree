@@ -3,21 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFamilyTree.App">
     <Application.Resources>
-        
-        <!-- Colors -->
         <Color x:Key="iOSNavigationBarColor">#004455</Color>
         <Color x:Key="AndroidNavigationBarColor">#004455</Color>
-        <Color x:Key="iOSNavigationBarTextColor">White</Color>
-        <Color x:Key="AndroidNavigationBarTextColor">White</Color>
-        <Color x:Key="PrimaryColor">#004455</Color>
-        <Color x:Key="PrimaryLightColor">#3a6f82</Color>
-        <Color x:Key="PrimaryDarkColor">#001d2c</Color>
-        <Color x:Key="SecondaryColor">#541044</Color>
-        <Color x:Key="SecondaryLightColor">#833e6f</Color>
-        <Color x:Key="SecondaryDarkColor">#2b001d</Color>
-        <Color x:Key="PrimaryTextColor">#00bfa2</Color>
-        <Color x:Key="SecondaryTextColor">#00bfa2</Color>
-
+        <Color x:Key="iOSNavigationBarTextColor">#ffffff</Color>
+        <Color x:Key="AndroidNavigationBarTextColor">#ffffff</Color>
+        
         <!-- Implicit styles -->
         <Style TargetType="{x:Type NavigationPage}">
             <Setter Property="BarBackgroundColor"
@@ -28,32 +18,41 @@
                                        Android={StaticResource AndroidNavigationBarTextColor}}" />
         </Style>
 
-        <Style TargetType="{x:Type ContentPage}"
-               ApplyToDerivedTypes="True">
-            <Setter Property="BackgroundColor"
-                    Value="{StaticResource PrimaryColor}" />
-        </Style>
-
-        <Style TargetType="{x:Type Label}" 
-               ApplyToDerivedTypes="True">
-            <Setter Property="TextColor" 
-                    Value="{StaticResource PrimaryTextColor}"></Setter>
-        </Style>
-
-        <Style TargetType="{x:Type Button}" 
-               ApplyToDerivedTypes="True">
-            <Setter Property="TextColor" 
-                    Value="{StaticResource PrimaryTextColor}"></Setter>
-            <Setter Property="BackgroundColor" 
-                    Value="{StaticResource SecondaryDarkColor}"></Setter>
-        </Style>
-
         <ResourceDictionary>
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#001d2c</Color>
+            <!-- Colors -->
+            <Color x:Key="PrimaryColor">#004455</Color>
+            <Color x:Key="PrimaryLightColor">#3a6f82</Color>
+            <Color x:Key="PrimaryDarkColor">#001d2c</Color>
+            <Color x:Key="SecondaryColor">#4da086</Color>
+            <Color x:Key="SecondaryLightColor">#7ed2b6</Color>
+            <Color x:Key="SecondaryDarkColor">#167159</Color>
+            <Color x:Key="PrimaryTextColor">#ffffff</Color>
+            <Color x:Key="SecondaryTextColor">#000000</Color>
+            
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />
                 <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+            <Style TargetType="{x:Type ContentPage}"
+               ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor"
+                    Value="{StaticResource PrimaryColor}" />
+            </Style>
+
+            <Style TargetType="{x:Type Label}" 
+               ApplyToDerivedTypes="True">
+                <Setter Property="TextColor" 
+                    Value="{StaticResource PrimaryTextColor}"></Setter>
+            </Style>
+
+            <Style TargetType="{x:Type Button}" 
+               ApplyToDerivedTypes="True">
+                <Setter Property="TextColor" 
+                    Value="{StaticResource PrimaryTextColor}"></Setter>
+                <Setter Property="BackgroundColor" 
+                    Value="{StaticResource SecondaryDarkColor}"></Setter>
             </Style>
         </ResourceDictionary>
     </Application.Resources>
